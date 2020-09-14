@@ -33,7 +33,7 @@ body {
 }
 .project__text__subtitle {
     padding-bottom: 40px;
-    font-size: 30;
+    font-size: 30px;
 }
 .project__text__explanation {
     padding-bottom: 30px;
@@ -43,8 +43,9 @@ body {
     width: 100%;
     padding-bottom: 40px;
 }
-.project__text {
-    /* width: 25%; */
+
+.project__image__container--wider, .project__image__container--wider2 {
+    margin-bottom: 15%;
 }
 .box {
     padding: 15px;
@@ -73,3 +74,92 @@ body {
         
     }
 }
+
+@media only screen and (min-width: 768px) {
+    .project__image__container {
+        width: 75%;
+        text-align: center;
+        margin: auto;
+   }
+   .project__image__container--wider, .project__image__container--wider2 {
+    margin-bottom: 10%;
+}
+}
+
+@media only screen and (min-width: 900px) {
+
+   .project__text, .title {
+        width: 400px;
+   }
+   .project__image__container {
+       width: 300px;
+       margin-left: 0;
+   }
+   .project__image__container--wider img, .project__image__container--wider2 img{
+       width: 300px;
+   }
+   .project__image__container--wider, .project__image__container--wider2 {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 10%;
+   }
+   
+   .project__image__container--padding1 {
+    margin: 2%;
+   }
+   .project__image__container--padding2 {
+    margin: 6%;
+   }
+
+  }
+  @media only screen and (min-width: 1200px) {
+
+ 
+    .project__image__container {
+        width: 350px;
+    }
+    .project__image__container--wider img, .project__image__container--wider2 img{
+        width: 350px;
+    }
+    .project__image__container--wider, .project__image__container--wider2 {
+         width: 100%;
+         margin: auto;
+         margin-bottom: 10%;
+    }
+    
+    .project__image__container--padding1 {
+     margin: 3%;
+    }
+    .project__image__container--padding2 {
+     margin: 8%;
+    }
+ 
+   }
+   @media only screen and (min-width: 1500px) {
+
+ 
+    .project__image__container {
+        width: 400px;
+    }
+    .project__image__container--wider img, .project__image__container--wider2 img{
+        width: 400px;
+    }
+    .project__image__container--wider, .project__image__container--wider2 {
+         width: 100%;
+         margin: auto;
+         margin-bottom: 10%;
+    }
+    
+    .project__image__container--padding1 {
+     margin: 5%;
+    }
+    .project__image__container--padding2 {
+     margin: 10%;
+    }
+ 
+   }
+    
+  
+ 
+ 
