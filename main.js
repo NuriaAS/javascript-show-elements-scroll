@@ -1,17 +1,36 @@
-let animated = document.querySelectorAll(".animated");
-function showOnScroll() {
-    let scrollTop = document.documentElement.scrollTop;
-    console.log(scrollTop)
-    for (var i = 0; i < animated.length; i++) {
-        let heightAnimated = animated[i].offsetTop;
-       console.log(heightAnimated)
-        if (heightAnimated - 300 > scrollTop) {
-            animated[i].style.opacity = 1;
-            animated[i].classList.add("showTop")
-            console.log("APARECE")
-        }
-        
-    }
+var scroll = window.requestAnimationFrame ||
+             
+function(callback){ window.setTimeout(callback, 1000/60)};
+var elementsToShow = document.querySelectorAll('.animated'); 
+
+function loop() {
+
+    Array.prototype.forEach.call(elementsToShow, function(element){
+      if (isElementInViewport(element)) {
+        element.classList.add('showTop');
+        element.style.opacity = 1;
+      }
+    });
+
+    scroll(loop);
 }
-window.addEventListener('scroll', showOnScroll);
+
+
+loop();
+
+
+function isElementInViewport(el) {
+
+  var rect = el.getBoundingClientRect();
+  return (
+    (rect.top <= 0
+      && rect.bottom >= 0)
+    ||
+    (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+    ||
+    (rect.top >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+  );
+}
 
