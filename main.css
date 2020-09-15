@@ -3,6 +3,9 @@
     padding: 0;
     font-family: 'Nunito Sans', sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+  }
 body {
     background-color: whitesmoke;
     padding: 2%;
@@ -10,8 +13,21 @@ body {
     width: 80%;
     margin: auto;
 }
+a {
+    color: #403f3f;
+    text-decoration-thickness: 0.2rem;
+    text-decoration-color: #e2d27c;
+    text-underline-offset: 0.7rem;
+    transition: 0.3s all ease-in;
+}
+a:hover {
+    text-underline-offset: 0.3rem;
+    text-decoration-thickness: 0.5rem;
+    transition: 0.3s all ease-in;
+    text-decoration-color: #403f3f;
+}
 .name {
-    padding-top: 2%;
+    margin-top: 5%;
 }
 .name, .project__text__title  {
     font-size: 16px;
@@ -23,9 +39,9 @@ body {
     font-weight: 200;
 }
 .name, .title {
-    padding-bottom: 100px;
+    margin-bottom: 100px;
 }
-.project__text {
+.project__text, .project__text {
     padding-bottom: 10%;
 }
 .project__text__title {
@@ -35,7 +51,7 @@ body {
     padding-bottom: 40px;
     font-size: 30px;
 }
-.project__text__explanation {
+.project__text__explanation, .about__text {
     padding-bottom: 30px;
     line-height: 25px;
 }
@@ -66,7 +82,7 @@ body {
 
 @keyframes showTop {
     0% {
-        transform: translateY(60px);
+        transform: translateY(70px);
         
     }
     100% {
@@ -74,6 +90,23 @@ body {
         
     }
 }
+
+.about {
+    margin-bottom: 10%;
+}
+.about__text__span, .about__text__links {
+    font-weight: 600;
+}
+.about__text__links {
+    color: #403f3f;
+    margin-left: 2%;
+    font-size: 14px;
+}
+.about__text__links:first-child {
+    margin-left: 0;
+}
+
+
 
 @media only screen and (min-width: 768px) {
     .project__image__container {
@@ -88,7 +121,7 @@ body {
 
 @media only screen and (min-width: 900px) {
 
-   .project__text, .title {
+   .project__text, .title, .about__text {
         width: 400px;
    }
    .project__image__container {
