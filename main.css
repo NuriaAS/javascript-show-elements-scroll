@@ -105,7 +105,30 @@ a:hover {
 .about__text__links:first-child {
     margin-left: 0;
 }
-
+/* PROJECT 1
+.project {
+    background-color: rgba(245, 245, 245, 0.6);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    
+}
+/* .project__container {
+    max-height: 80%;
+    max-width: 80%;
+    overflow-y: scroll;
+    background-color: whitesmoke;
+} */
+ /* .project-pop-up {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none; 
+}  */
 
 
 @media only screen and (min-width: 768px) {
@@ -144,6 +167,13 @@ a:hover {
    .project__image__container--padding2 {
     margin: 6%;
    }
+    .project__container .project__image__container img {
+        width: 35%;
+    }
+    .project__image__container:first-child img {
+        width: 100%;
+
+    }
 
   }
   @media only screen and (min-width: 1200px) {

@@ -1,5 +1,6 @@
+
 var scroll = window.requestAnimationFrame ||
-             
+          
 function(callback){ window.setTimeout(callback, 1000/60)};
 var elementsToShow = document.querySelectorAll('.animated'); 
 
@@ -34,17 +35,9 @@ function isElementInViewport(el) {
   );
 }
 
-$(document).ready(function() {
-	
-	$(".project__image__container a").click(function() {
-		var url = $(this).attr("href");
-    $(".project-pop-up").load(url);
-    $(".project-pop-up").css("display", "block")
-		return false;
-	});
 
-			
-}); 
+
+
 
 
 
