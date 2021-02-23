@@ -39,10 +39,21 @@ $(document).ready(function() {
 	$(".project__image__container a").click(function() {
 		var url = $(this).attr("href");
     $(".project-pop-up").load(url);
-    $(".project-pop-up").css("display", "block")
+    $(".project-pop-up").css("display", "block");
+   
+    if($(".project-pop-up").css("display", "block")) {
+      $("body").css("overflow-y", "hidden");
+      $(".project-pop-up__close").css("display", "block");
+    }else {
+     
+    }
 		return false;
 	});
-
+  $(".project-pop-up__close").click(function() {
+    $(this).css("display", "none");
+    $(".project-pop-up").css("display", "none");
+    $("body").css("overflow-y", "scroll");
+  })
 			
 }); 
 

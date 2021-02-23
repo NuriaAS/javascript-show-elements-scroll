@@ -105,31 +105,40 @@ a:hover {
 .about__text__links:first-child {
     margin-left: 0;
 }
-/* PROJECT 1
-.project {
-    background-color: rgba(245, 245, 245, 0.6);
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    align-items: center;
-    
+/* PROJECT 1*/
+
+ .project__container, .project__page {
+    padding-right: 10%;
+    padding-left: 10%;
+    background-color: #fff1e6;
+   
+} 
+.project__container {
+    margin: auto;
 }
-/* .project__container {
-    max-height: 80%;
-    max-width: 80%;
-    overflow-y: scroll;
-    background-color: whitesmoke;
-} */
- /* .project-pop-up {
+.project__page {
+    padding-top: 10%;
+}
+
+ .project-pop-up {
     position: fixed;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     display: none; 
-}  */
-
+    background-color: #fff1e6;
+    overflow-y: scroll;
+ }
+ .project-pop-up__close {
+     width: 24px;
+     height: 24px;
+     position: fixed;
+     right: 5%;
+     top: 5%;
+     cursor: pointer;
+     display: none;
+ }
 
 @media only screen and (min-width: 768px) {
     .project__image__container {
@@ -151,7 +160,7 @@ a:hover {
        width: 300px;
        margin-left: 0;
    }
-   .project__image__container--wider img, .project__image__container--wider2 img{
+   .project__image__container--wider a img, .project__image__container--wider img, .project__image__container--wider2 a img, .project__image__container--wider2 img{
        width: 300px;
    }
    .project__image__container--wider, .project__image__container--wider2 {
@@ -167,9 +176,7 @@ a:hover {
    .project__image__container--padding2 {
     margin: 6%;
    }
-    .project__container .project__image__container img {
-        width: 35%;
-    }
+    
     .project__image__container:first-child img {
         width: 100%;
 
@@ -182,7 +189,7 @@ a:hover {
     .project__image__container {
         width: 350px;
     }
-    .project__image__container--wider img, .project__image__container--wider2 img{
+    .project__image__container--wider a img, .project__image__container--wider img, .project__image__container--wider2 a img, .project__image__container--wider2 img{
         width: 350px;
     }
     .project__image__container--wider, .project__image__container--wider2 {
@@ -205,7 +212,7 @@ a:hover {
     .project__image__container {
         width: 400px;
     }
-    .project__image__container--wider img, .project__image__container--wider2 img{
+    .project__image__container--wider a img, .project__image__container--wider img, .project__image__container--wider2 a img, .project__image__container--wider2 img{
         width: 400px;
     }
     .project__image__container--wider, .project__image__container--wider2 {
@@ -222,7 +229,6 @@ a:hover {
     }
  
    }
-    
-  
+
  
  
